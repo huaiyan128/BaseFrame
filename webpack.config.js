@@ -24,13 +24,26 @@ module.exports = {
       query: {
         presets: ['es2015', 'react', 'stage-0']
       }
-    }]
+    },{
+      test: /\.css$/,
+      loader: 'style!css'
+    }, {
+      test: /\.less$/,
+      loader: 'style!css!less'
+    },{ 
+      test: /\.(png|jpg)$/, 
+      loader: 'url?limit=25000' 
+    }
+    
+    
+    
+    ]
   },
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css']
   },
   devServer: {
-    //contentBase: path.join(__dirname, "/views"),
+    contentBase: path.join(__dirname, "/dist"),
     compress: true,
     port: 2354
   },

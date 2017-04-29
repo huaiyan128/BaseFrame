@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --display-error-details",
-    "start": "webpack-dev-server --inline --hot"
+    "build": "webpack --display-error-details",
+    "start": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
   },
   "keywords": [],
   "author": "Zaki_Ko",
@@ -18,8 +19,12 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.0",
     "jsx-loader": "^0.13.2",
+    "less-loader": "^4.0.3",
     "react-dom": "^15.5.4",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
     "webpack": "^2.4.1"
   },
   "dependencies": {
