@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   //页面入口文件配置
   entry: {
@@ -29,9 +30,14 @@ module.exports = {
     extensions: ['.json', '.js', '.jsx', '.css']
   },
   devServer: {
-    contentBase: path.join(__dirname, "/views"),
+    //contentBase: path.join(__dirname, "/views"),
     compress: true,
-    port: 9000
+    port: 2354
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins:[
+    new HtmlWebpackPlugin({
+      template:'./app/index.html'
+    })
+  ]
 };
