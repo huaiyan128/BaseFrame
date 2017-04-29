@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"webpack --display-error-details"
+    "dev": "webpack --display-error-details",
+    "start": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "webpack": "^2.4.1"
   },
   "dependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "webpack-dev-server": "^2.4.5"
   }
 }

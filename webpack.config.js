@@ -1,8 +1,8 @@
 const path = require('path');
 module.exports = {
-   //页面入口文件配置
+  //页面入口文件配置
   entry: {
-    index:['./app/js/index.jsx']
+    index: ['./app/js/index.jsx']
   },
   //入口文件输出配置
   output: {
@@ -21,12 +21,17 @@ module.exports = {
       ],
       loader: 'babel-loader',
       query: {
-        presets: ['es2015','react','stage-0']
+        presets: ['es2015', 'react', 'stage-0']
       }
     }]
   },
   resolve: {
     extensions: ['.json', '.js', '.jsx', '.css']
+  },
+  devServer: {
+    // contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
   },
   devtool: 'source-map'
 };
