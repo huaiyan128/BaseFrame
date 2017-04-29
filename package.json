@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zaki_Ko",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
