@@ -35,8 +35,6 @@ module.exports = {
       loader: 'url?limit=25000' 
     }
     
-    
-    
     ]
   },
   resolve: {
