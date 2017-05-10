@@ -28,11 +28,11 @@ module.exports = {
       test: /\.css$/,
       loader: 'style!css'
     }, {
-      test: /\.less$/,
-      loader: 'style!css!less'
+     test: /\.less$/,
+      loader: 'style-loader!css-loader!less-loader'
     },{ 
-      test: /\.(png|jpg)$/, 
-      loader: 'url?limit=25000' 
+     test: /\.(png|jpg)$/,
+      loader: 'url-loader?limit=25000'
     }
     
     ]
@@ -43,6 +43,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "/dist"),
     compress: true,
+    historyApiFallback: true,
     port: 2354
   },
   devtool: 'source-map',
